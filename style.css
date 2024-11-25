@@ -1,0 +1,26 @@
+body {
+    background-color: #f4f4f9;
+}
+.bank_container {
+    padding-top: 50px;
+}
+.card-img-top {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+.modal-header {
+    background-color: #4CAF50;
+    color: white;
+}
+.modal-body {
+    background-color: #f9f9f9;
+}
+.btn-custom {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+}
+.btn-custom:hover {
+    background-color: #45a049;
+}
