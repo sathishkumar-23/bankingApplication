@@ -41,7 +41,10 @@
                         <label for="amount" class="form-label">Amount</label>
                         <input type="number" class="form-control" name="amount" required>
                     </div>
-                
+                    <!-- account number -->
+                    <input type="hidden" name="account_id" value="<?php echo $_GET['account_id']; ?>">
+
+                    <!-- type -->
                     <input type="hidden" name="transactor_type" value="credit">
 
                     <button type="submit" name="credit" class="btn btn-custom">Save</button>

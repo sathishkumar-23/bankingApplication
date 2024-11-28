@@ -84,8 +84,29 @@ $transaction = $stmt->fetchAll();
 </table>
 <div>
   <a href="index.php"><button class="btn btn-primary">go to Home</button></a>
+  <button id="downloadBtn"class=" btn btn-info">Download statement</button>
 </div>
 </div>
+<script>
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            // Get the HTML content of the page
+            //const pageContent = document.documentElement.outerHTML;
+            const heading = document.querySelector('h4').outerHTML;
+            const table = document.querySelector('table').outerHTML;
 
+            const contnent = headding+table;
+
+            // Create a Blob with the HTML content
+            const blob = new Blob([pageContent], { type: 'text/html' });
+
+            // Create a link element
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'downloaded-page.html';
+
+            // Trigger the download by simulating a click
+            link.click();
+        });
+</script>
 </body>
 </html>

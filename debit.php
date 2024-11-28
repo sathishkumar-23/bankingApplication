@@ -44,6 +44,10 @@
                         <label for="balance" class="form-label">Balance</label>
                         <input type="text" class="form-control" value="100" disabled>
                     </div>
+
+                    <!-- account number -->
+                    <input type="hidden" name="account_id" value="<?php echo $_GET['account_id']; ?>">
+                    
                     <input type="hidden" name="transactor_type" value="debit">
 
                     <button type="submit" name="debit" class="btn btn-custom">Save</button>

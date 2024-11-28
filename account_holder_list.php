@@ -1,7 +1,7 @@
 <?php
 include("dbconn.php");
 try {
-    $sql = "SELECT account_name, account_number, account_balance FROM account";
+    $sql = "SELECT account_id,account_name, account_number, account_balance FROM account";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $accounts = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -110,8 +110,8 @@ try {
                         <td><?php echo $account['account_number']; ?></td>
                         <td>₹<?php echo number_format($account['account_balance'], 2); ?></td>
                         <td class="action-buttons">
-                            <a href="credit.php?account_number=<?php echo $account['account_number']; ?>" class="btn btn-success">Credit</a>
-                            <a href="debit.php?account_number=<?php echo $account['account_number']; ?>" class="btn btn-danger">Debit</a>
+                            <a href="credit.php?account_id=<?php echo $account['account_id']; ?>" class="btn btn-success">Credit</a>
+                            <a href="debit.php?account_id=<?php echo $account['account_id']; ?>" class="btn btn-danger">Debit</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
